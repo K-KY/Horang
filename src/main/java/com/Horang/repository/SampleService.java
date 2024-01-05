@@ -8,7 +8,6 @@ public class SampleService {
 
     public SampleService(SampleRepository repository) {
         this.repository = repository;
-        repository.save(new SampleEntity("규영", 24, "인천"));
     }
 
     public SampleDto findById(Long id) {
