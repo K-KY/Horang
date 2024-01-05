@@ -1,3 +1,6 @@
 ###
 GET {{hostname}}/sample/hello
-    ?name=Jiwon
+    ?name=jiwon
+
+###
+GET {{hostname}}/sample/hello/member

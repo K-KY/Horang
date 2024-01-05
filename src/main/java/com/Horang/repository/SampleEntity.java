@@ -14,16 +14,19 @@ import lombok.NoArgsConstructor;
 @Table(name = "sample")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class SampleEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+
+    private Integer age;
+
+    private String region;
+
     public SampleEntity(String name, Integer age, String region) {
         this.name = name;
         this.age = age;
         this.region = region;
     }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
-    private Integer age;
-    private String region;
 }
